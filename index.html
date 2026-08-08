@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SIMETIC Karimun</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMETIC KARIMUN - Layanan Otomatis Permohonan Sertifikat Elektronik</title>
     <link rel="icon" href="https://karimunkab.go.id/favicon.ico" />
+
     <style>
-        html, body {
+        * {
             margin: 0;
             padding: 0;
-            height: 100%;
+            box-sizing: border-box;
+        }
+        html, body {
             width: 100%;
+            height: 100%;
             overflow: hidden;
+            background-color: #0f172a;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
-        .frame-container {
+        .iframe-container {
             width: 100%;
-            height: 100%;
+            height: 100vh;
+            border: none;
         }
-        #app {
+        iframe {
             width: 100%;
             height: 100%;
             border: none;
@@ -25,17 +32,19 @@
     </style>
 </head>
 <body>
-
-    <div class="frame-container">
-        <!-- Silakan ganti src dengan URL Google Apps Script Anda -->
+    <div class="iframe-container">
+        <!-- Ganti URL src dengan Web App Google Apps Script SIMETIC KARIMUN Anda -->
         <iframe 
-            id="app" 
+            id="app"
             src="https://script.google.com/macros/s/AKfycbyVEpjmWynwF-pP2mR_zAgLtTP1tozyv_NcFU75VT-SxFhSjOl2qVUf4D3ynWW5ADh7NA/exec" 
+            title="SIMETIC KARIMUN"
+            allow="geolocation; microphone; camera; clipboard-write;"
             scrolling="yes" 
-            allowfullscreen="true">
+            allowfullscreen="true"
+            sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+            
         </iframe>
     </div>
-
 </body>
 </html>
 
